@@ -1,5 +1,13 @@
 # K-Nearest Neighbors - KNN
 
+Feito em parceria com:
+
+        Giorggia Talynska Malheiros
+        Helouise Dayane Dos Santos Silva
+        Rafael Assis Esteves Dos Santos
+        Patricia Adania De Oliveira
+        Vanderlândio Zeferino Da Rocha
+
 Modelo supervisionado de machine learning que pode ser utilizado tanto para classificação, isto é, rotular os dados; quanto para regressão, ou seja, aproximar valores.
 
 ## Características
