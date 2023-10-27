@@ -1,52 +1,45 @@
 # K-Nearest Neighbors - KNN
 
-Feito em parceria com:
+Este projeto foi desenvolvido como parte do primeiro módulo do curso da Ada Tech e é uma implementação do algoritmo K-Nearest Neighbors (KNN), um modelo de machine learning supervisionado que pode ser utilizado tanto para classificação quanto para regressão.
+
+## Colaboradores
 
         Giorggia Talynska Malheiros
         Helouise Dayane Dos Santos Silva
         Rafael Assis Esteves Dos Santos
         Patricia Adania De Oliveira
         Vanderlândio Zeferino Da Rocha
-
-Modelo supervisionado de machine learning que pode ser utilizado tanto para classificação, isto é, rotular os dados; quanto para regressão, ou seja, aproximar valores.
+        
+## Descrição
+O K-Nearest Neighbors (KNN) é um algoritmo amplamente utilizado em machine learning devido à sua simplicidade, interpretabilidade e eficácia em muitos cenários. Ele é capaz de classificar ou estimar valores com base na proximidade entre os pontos de dados.
 
 ## Características
+A complexidade do KNN varia dependendo da implementação, podendo ser O(n*m) ou O(log(n)).
+É um algoritmo simples e facilmente interpretável.
+É amplamente conhecido e estudado na área de machine learning.
+Oferece um desempenho razoavelmente rápido, tornando-o adequado como benchmark.
+Algoritmo
+O algoritmo K-Nearest Neighbors consiste nos seguintes passos<br>
 
-- Dependendo da implementação pode ser $O(n*m)$ ou $O(log(n))$
-- Simples
-- Interpretável
-- Largamente conhecido e estudado
-- Razoavelmente rápido
-
-Por conta disso é um ótimo benchmark
-
-## Algoritmo
-
-- Passo 1:
-    Definir um valor para K
-- Passo 2:
-    Definir os K vizinhos mais próximos do ponto a ser classificado de acordo com uma função de distância.
+- Passo 1: Definir um valor para K, que representa o número de vizinhos mais próximos a serem considerados.
+- Passo 2: Encontrar os K vizinhos mais próximos do ponto a ser classificado de acordo com uma função de distância, como a distância Euclidiana.
 - Passo 3:
-    - Se for um problema de **Regressão**:
-        Calcular a **média** de todos os vizinhos.
-    - Se for um problema de **Classificação**:
-        Calcular a **moda** de todos os vizinhos.
-- Passo 4:
-    Atribuir o valor/classe ao ponto de interesse conforme cálculo do Passo 3.
+Se o problema é de Regressão, calcule a média dos valores-alvo dos K vizinhos.
+Se o problema é de Classificação, calcule a moda das classes dos K vizinhos.
+- Passo 4: Atribuir o valor/classe ao ponto de interesse com base no cálculo realizado no Passo 3.
 
 ## Definição do Problema
+Dados <br>
+O projeto utiliza dados relacionados ao cadastro de clientes de uma empresa de logística de entrega de alimentação. Os dados incluem informações sobre quanto cada cliente gastou em suas últimas 4 compras e uma classificação do Net Promoter Score (NPS) em três categorias: Promotor, Neutro e Detrator. O objetivo é utilizar o KNN para estimar a classificação de NPS para os clientes que ainda não foram classificados, com o intuito de melhorar o atendimento a esses novos clientes.
 
-### Dados
-Os dados abaixo são referentes ao cadastro de clientes de uma empresa de logística de entrega de alimentação. Nesse cadastro, há quanto foi gasto pelo cliente nas últimas 4 compras e uma classificação de NPS: **Promotor**, **Neutro**, **Detrator**. O nosso intuito é, a partir das últimas compras de alguns clientes que já deu uma nota NPS, estimar esse calssificação para aqueles que ainda não estão classificado, afim de melhorar o atendimento desses novos clientes.
+Os dados de entrada seguem o seguinte padrão:
 
-Os dados abaixo seguem o seguinte padrão:
+- CPF: Número de identificação do cliente (INT).
+- Classificação NPS: Classificação do cliente (STRING).
+- Valor das últimas compras feitas pelo cliente: Tupla de valores (TUPLA).
 
-[**CPF**: INT, **Classificação NPS**: STRING, **Valor das últimas compras feitas pelo cliente**: TUPLA
-
-
-[NPS](https://assets-global.website-files.com/633ec8b202a7496fb9c9dda9/64020daae50d701ac16ebd7a_Net%20Promoter%20Score.jpeg)
-
-### Regras
-- Se você precisar de uma função para computar algo crie ela
-- Não é permitido usar nenhum módulo externo como numpy e math
-- Use apenas os objetos e fluxos visto até o momento no curso
+## Regras do Projeto
+É permitido criar funções para calcular valores ou realizar operações específicas.
+Não é permitido o uso de módulos externos, como numpy e math.
+Deve-se utilizar apenas objetos e fluxos de controle vistos até o momento no curso.
+Este projeto demonstra a aplicação do algoritmo KNN na classificação de clientes com base em seu histórico de compras e NPS, oferecendo uma solução valiosa para a empresa de logística de entrega de alimentação.
